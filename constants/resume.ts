@@ -1,46 +1,6 @@
 import type { Language } from "@/models/language";
 import type { Resume } from "@/models/resume";
 
-const skills = {
-  frontend: [
-    "JavaScript ES6+",
-    "TypeScript 4+",
-    "SCSS, Tailwind",
-    "Responsive Design",
-    "Bootstrap, Mantine, Chakra UI",
-    "shadcn/ui, Framer Motion",
-    "Styled Components, Emotion",
-    "React, Next.js [Pages/App Router]",
-    "Vue 2/3, Vuex, Nuxt.js",
-    "Angular, RxJS, NgRX",
-  ],
-  moreFrontend: [
-    "Redux / Toolkit, Mobx, Zustand",
-    "React Hook Form, Formik",
-    "GraphQL, Apollo Client",
-    "Canvas API, Intersection Observer API",
-    "Three JS, React Three Fiber",
-    "Notifications API, Service Workers",
-    "Pagination, Infinite Scroll",
-    "Lazy Loading, Virtualization",
-    "Jest, React Testing Library",
-  ],
-  mobile: [
-    "Kotlin, Java",
-    "Android SDK, Volley",
-    "React Native",
-    "React Navigation",
-    "Reanimated, Gesture Handler",
-  ],
-  backend: [
-    "NodeJS, ExpressJS",
-    "JWT Tokens, Cookies",
-    "MongoDB, PostgreSQL",
-    "Authentication",
-    "Web Sockets",
-  ],
-};
-
 export const ru: Resume = {
   firstName: "Владимир",
   lastName: "Степанов",
@@ -54,22 +14,22 @@ export const ru: Resume = {
     title: "О себе",
     content: [
       "Я фронтенд разработчик со стремлением к постоянному развитию и совершенствованию своих навыков, чтобы создавать качественные и удобные для пользователя продукты",
-      "Мой путь в разработку начался с написания небольшой текстовой игры под Android, которая позволила мне понять, что программирование — это то, чем я хочу заниматься",
-      "За более чем три года опыта работы с фронтенд фреймворками (преимущественно React, но также есть опыт с React Native, Vue и Angular) я приобрел навыки создания качественных и отзывчивых пользовательских интерфейсов. Я работал над множеством проектов, включая создание корпоративных сайтов, админ панелей и мобильных приложений",
-      "Кроме того, у меня есть опыт менторства коллег, находящихся на этапе стажировки, и я всегда готов делиться своими знаниями и опытом. Я считаю, что обучение других — это отличный способ улучшить свои навыки и расширить свое понимание предметной области",
+      "С 2020 года работаю коммерческим фронтенд-разработчиком, специализируюсь на React. За это время я принял участие в разработке и поддержке проектов различной сложности — от лендингов до сложных SPA, внутренних админ-панелей и мобильных приложений",
+      "Кроме того, у меня есть опыт менторства коллег, находящихся на этапе стажировки, и я всегда готов делиться своими знаниями и опытом. Я считаю, что обучение других - это отличный способ улучшить свои навыки и расширить свое понимание предметной области",
     ],
-  },
-  skills: {
-    title: "Навыки",
-    ...skills,
   },
   experience: {
     title: "Опыт",
     content: [
       {
         title: "ООО “Двигус”",
-        description:
-          "Отвечал за разработку системы управления подбором. В нее входили веб-приложение для работы операторов, интеграция сервиса обзвона и админ. панель",
+        description: [
+          "Разработал MVP с нуля и довёл продукт до продакшена. Отвечал за дальнейшую поддержку, развитие и стабильность системы",
+          "Реализовал систему управления подбором недвижимости: веб-приложение для операторов, админ-панель и интеграции со сторонними сервисами",
+          "Интегрировал сервисы телефонии и автоматического обзвона, обеспечив надёжную работу ключевых бизнес-процессов",
+          "Взаимодействовал с командой внешнего сервиса: формировал баг-репорты и предложения по улучшению, повысив качество и устойчивость интеграции",
+          "Разрабатывал и внедрял новые фичи, оптимизировал существующий код и устранял баги, повышая производительность и удобство работы пользователей",
+        ],
         location: "г. Москва",
         position: "Frontend разработчик",
         tags: ["React"],
@@ -78,8 +38,12 @@ export const ru: Resume = {
       },
       {
         title: "ООО “Квантум”",
-        description:
-          "Был частью команды разработки C2B2C платформы. Руководил разработкой клиенто-ориентированной части платформы, в нее входили веб-приложение на Next.js и мобильное приложение на React Native",
+        description: [
+          "Руководил разработкой клиентской части C2B2C-платформы, обеспечивая согласованность архитектуры и качества кода",
+          "Отвечал за клиентскую часть платформы: веб-приложение на Next.js и мобильное приложение на React Native",
+          "Принимал архитектурные решения на фронтенде, обеспечивая масштабируемость и единый пользовательский опыт",
+          "Работал в тесном взаимодействии с дизайнерами и бэкенд-разработчиками, влияя на UI/UX и качество продукта",
+        ],
         location: "г. Якутск",
         position: "Frontend разработчик",
         tags: ["React", "Next.JS", "React Native"],
@@ -88,8 +52,12 @@ export const ru: Resume = {
       },
       {
         title: "ООО “АЭБ АйТи”",
-        description:
-          "В составе команды разрабатывал медицинский портал на Next.JS и его админ. панель на React",
+        description: [
+          "Разрабатывал региональный медицинский портал на Next.js и админ-панель на React",
+          "Реализовал систему сабдоменных сайтов для медицинских организаций с возможностью кастомизации структуры страниц и тем оформления",
+          "Реализовал работу со сложными формы, drag-and-drop-интерфейсами, WYSIWYG-редакторами и интеграцию с картами",
+          "Обеспечил удобное управление контентом и внешним видом сайтов без участия разработчиков",
+        ],
         location: "г. Якутск",
         position: "Frontend разработчик",
         tags: ["React", "Next.JS"],
@@ -123,22 +91,22 @@ export const en: Resume = {
     title: "About",
     content: [
       "I am a frontend developer with a passion for continuous growth and improving my skills to create high-quality and user-friendly products",
-      "My journey into development began with writing a small text-based game for Android, which made me realize that programming is what I want to do",
-      "With over three years of experience working with frontend frameworks (primarily React, but also with React Native, Vue, and Angular), I have gained skills in creating high-quality and responsive user interfaces. I have worked on a variety of projects, including corporate websites, admin panels, and mobile applications",
+      "Since 2020, I have been working as a commercial Frontend Developer specializing in React. During this time, I have participated in the development and maintenance of projects of varying complexity — from landing pages to complex SPAs, internal admin panels, and mobile applications",
       "Additionally, I have experience mentoring colleagues who are at the internship stage, and I am always ready to share my knowledge and experience. I believe that teaching others is a great way to improve my own skills and expand my understanding of the subject",
     ],
-  },
-  skills: {
-    title: "About",
-    ...skills,
   },
   experience: {
     title: "Experience",
     content: [
       {
         title: "Dvigus",
-        description:
-          "I was responsible for developing a recruitment management system, which included a web application for operator workflows, integration with a call service, and an admin panel",
+        description: [
+          "Developed an MVP from scratch and brought the product to production. Responsible for ongoing maintenance, development, and system stability",
+          "Implemented a real estate selection management system: a web application for operators, an admin panel, and integrations with third-party services",
+          "Integrated telephony services and automated calling systems, ensuring reliable operation of key business processes",
+          "Collaborated with the team of an external service: created bug reports and improvement proposals, improving the quality and stability of the integration",
+          "Developed and implemented new features, optimized existing code, and fixed bugs, improving performance and user experience",
+        ],
         location: "Russia, Moscow",
         position: "Frontend Developer",
         tags: ["React"],
@@ -147,8 +115,12 @@ export const en: Resume = {
       },
       {
         title: "Qwantum",
-        description:
-          "I was part of the team developing a C2B2C platform, where I led the development of the client-oriented parts, including a Next.js web application and a React Native mobile app",
+        description: [
+          "Led the development of the client side of a C2B2C platform, ensuring architectural consistency and code quality",
+          "Responsible for the client side of the platform: a web application built with Next.js and a mobile application built with React Native",
+          "Made frontend architectural decisions to ensure scalability and a consistent user experience",
+          "Worked closely with designers and backend developers, influencing UI/UX and overall product quality",
+        ],
         location: "Russia, Yakutsk",
         position: "Frontend Developer",
         tags: ["React", "Next.JS", "React Native"],
@@ -157,8 +129,12 @@ export const en: Resume = {
       },
       {
         title: "AEB IT",
-        description:
-          "As part of the team, I developed a medical portal on Next.js and its admin panel on React",
+        description: [
+          "Developed a regional medical portal using Next.js and an admin panel using React",
+          "Implemented a system of subdomain-based websites for medical organizations with customizable page structures and themes",
+          "Implemented complex forms, drag-and-drop interfaces, WYSIWYG editors, and map integrations",
+          "Ensured convenient management of site content and appearance without requiring developer involvement",
+        ],
         location: "Russia, Yakutsk",
         position: "Frontend Developer",
         tags: ["React", "Next.JS"],

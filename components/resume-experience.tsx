@@ -9,22 +9,27 @@ const ResumeExperience: FC<Props> = (props) => {
   const { data } = props;
   const { date, duration, title, description, position, tags } = data;
   return (
-    <div className="flex flex-col sm:flex-row">
-      <div className="flex min-w-48 max-w-48 flex-col text-xs text-neutral-600 sm:text-sm">
-        <p>{date}</p>
-        {duration.length > 0 && <p>({duration})</p>}
-      </div>
-      <div className="mt-2 flex flex-col text-sm sm:mt-0">
+    <div className="flex flex-col">
+      <div className="flex flex-col gap-x-2 text-sm md:flex-row print:flex-row">
         <p className="font-semibold">{title}</p>
-        <div className="flex flex-col items-start text-neutral-600 sm:flex-row sm:items-center">
-          <p className="underline">{position}</p>
-          <p className="ml-0 text-xs leading-[normal] sm:ml-1">
-            ({tags.join(", ")})
-          </p>
-        </div>
-        <p className="mt-1 text-xs leading-[normal] text-neutral-600 sm:mt-0.5 sm:text-sm sm:leading-[normal]">
-          {description}
-        </p>
+        <p>{position}</p>
+        <p className="text-xs leading-[unset]">({tags.join(", ")})</p>
+      </div>
+      <div className="mt-1 flex flex-wrap gap-x-3 text-sm sm:mt-0">
+        <p className="text-neutral-600">{date}</p>
+        {duration.length > 0 && (
+          <p className="text-neutral-600">({duration})</p>
+        )}
+      </div>
+      <div className="mt-1 flex flex-col text-base">
+        {description.map((line, idx) => (
+          <div key={idx} className="flex items-center">
+            <div className="relative top-2 mr-2 aspect-square size-1 self-start bg-black print:bg-black" />
+            <p className="mt-1 text-sm leading-[normal] sm:mt-0.5 sm:leading-[normal]">
+              {line}
+            </p>
+          </div>
+        ))}
       </div>
     </div>
   );

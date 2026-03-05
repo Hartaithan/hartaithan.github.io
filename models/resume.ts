@@ -8,17 +8,9 @@ export interface ResumeAbout {
   content: string[];
 }
 
-export interface ResumeSkills {
-  title: string;
-  frontend: string[];
-  moreFrontend: string[];
-  mobile: string[];
-  backend: string[];
-}
-
 export interface ResumeExperienceItem {
   title: string;
-  description: string;
+  description: string[];
   location: string;
   position: string;
   tags: string[];
@@ -47,7 +39,6 @@ export interface Resume {
   lastName: string;
   contacts: ResumeContact[];
   about: ResumeAbout;
-  skills: ResumeSkills;
   experience: ResumeExperience;
   education: ResumeEducation;
 }
