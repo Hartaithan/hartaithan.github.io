@@ -13,14 +13,18 @@ const ResumeExperience: FC<Props> = (props) => {
       <div className="flex flex-col gap-x-2 text-sm md:flex-row print:flex-row">
         <p className="font-semibold">{title}</p>
         <p>{position}</p>
-        <p className="text-xs leading-[unset]">({tags.join(", ")})</p>
       </div>
-      <div className="mt-1 flex flex-wrap gap-x-3 text-sm sm:mt-0">
+      <div className="mt-1 flex flex-wrap gap-x-3 text-sm">
         <p className="text-neutral-600">{date}</p>
         {duration.length > 0 && (
           <p className="text-neutral-600">({duration})</p>
         )}
       </div>
+      <ul className="mt-2 flex flex-wrap gap-x-1.5 gap-y-0.5 text-xs">
+        {tags.map((tag) => (
+          <li key={tag}>{tag}</li>
+        ))}
+      </ul>
       <div className="mt-1 flex flex-col text-base">
         {description.map((line, idx) => (
           <div key={idx} className="flex items-center">

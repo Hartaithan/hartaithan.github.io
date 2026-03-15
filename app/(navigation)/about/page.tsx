@@ -11,20 +11,16 @@ const About: FC = () => {
       <div className="col-span-1 rounded-lg bg-neutral-900 px-5 py-4 md:px-6 md:py-5 lg:col-span-2">
         <h1 className="text-base font-semibold md:text-xl">About Me</h1>
         <p className="mt-2 text-sm md:text-base 2xl:text-lg">
-          I am a <b>frontend developer</b> with a strong drive to&nbsp;
-          <b>continuously improve my skills</b> and&nbsp;
-          <b>deliver high-quality, user-friendly</b> products. Since 2020, I
-          have been&nbsp;
-          <b>honing my abilities</b> in crafting responsive and engaging user
-          interfaces.
+          Frontend developer with commercial experience in&nbsp;
+          <b>React development since 2020</b>. I specialize in&nbsp;
+          <b>building complex web applications</b>: from internal admin panels
+          to high-load interfaces for operational teams
         </p>
         <p className="mt-2 text-sm md:text-base 2xl:text-lg">
-          <b>My primary specialization is React</b>, but I also have experience
-          with&nbsp;
-          <b>React Native, Vue, and Angular</b>, allowing me to&nbsp;
-          <b>adapt to various projects and challenges</b>. I have worked on
-          numerous projects, including building corporate websites, user
-          tracking scripts, admin panels, and mobile applications.
+          I have experience developing products&nbsp;
+          <b>from scratch to production</b>, making frontend architectural
+          decisions, and <b>leading a small team of developers</b>, including
+          conducting code reviews and mentoring junior specialists
         </p>
       </div>
       <ExperienceSection />

@@ -5,7 +5,7 @@ export const experience: Experience[] = [
     title: "Dvigus",
     location: "Russia, Moscow",
     position: "Frontend Developer",
-    tags: ["React", "Tracking Scripts"],
+    tags: ["React"],
     from: "10.2023",
     to: "present",
   },
