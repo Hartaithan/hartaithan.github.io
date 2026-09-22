@@ -8,7 +8,7 @@ const ResumeHeading: FC<Props> = (props) => {
   return (
     <h1
       className={cn(
-        "mt-3 text-base font-semibold leading-[normal] sm:text-lg sm:leading-[normal]",
+        "mt-3 text-base font-semibold sm:text-lg print:mt-2 print:text-sm",
         className,
       )}>
       {children}

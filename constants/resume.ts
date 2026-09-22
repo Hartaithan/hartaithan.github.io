@@ -4,33 +4,100 @@ import type { Resume } from "@/models/resume";
 export const ru: Resume = {
   firstName: "Владимир",
   lastName: "Степанов",
+  position: "Frontend-разработчик",
   contacts: [
+    { value: "https://t.me/hartaithan", type: "link" },
     { value: "stepanov.vladimir.in.re@gmail.com", type: "mail" },
     { value: "https://hartaithan.github.io", type: "link" },
-    { value: "https://t.me/hartaithan", type: "link" },
     { value: "г. Якутск", type: "text" },
   ],
   about: {
     title: "О себе",
     content: [
-      "Фронтенд разработчик с коммерческим опытом разработки на React с 2020 года. Специализируюсь на создании сложных веб-приложений: от внутренних админ-панелей до высоконагруженных интерфейсов для операционных команд",
-      "Имею опыт разработки продуктов с нуля до production, принятия архитектурных решений на фронтенде и руководства небольшой командой разработчиков, включая проведение code review и менторство junior-специалистов",
+      "Frontend-разработчик с 5+ годами коммерческого опыта в React, TypeScript и Next.js. Проектирую архитектуру SPA- и SSR-приложений с нуля, разрабатываю UI-киты, сложные динамические формы и интеграции со сторонними сервисами (телефония, карты, CRM). Довёл продукт от идеи до production как единственный frontend-разработчик. Руководил командой из 2 junior-разработчиков: code review, менторинг.",
+    ],
+  },
+  skills: {
+    title: "Навыки",
+    content: [
+      {
+        label: "Языки и технологии",
+        items: ["JavaScript", "TypeScript", "HTML", "CSS", "SCSS"],
+      },
+      {
+        label: "Фреймворки",
+        items: ["React", "SPA", "Next.js", "SSR", "React Native"],
+      },
+      {
+        label: "Состояние и данные",
+        items: ["MobX", "Redux", "Redux Toolkit", "React Query"],
+      },
+      {
+        label: "Работа с API",
+        items: ["REST API", "Axios", "GraphQL", "Apollo Client", "WebSocket"],
+      },
+      {
+        label: "Формы и валидация",
+        items: ["React Hook Form", "Formik", "Zod", "Schema-driven forms"],
+      },
+      {
+        label: "UI и стилизация",
+        items: [
+          "Mantine",
+          "Bootstrap",
+          "Tailwind",
+          "Storybook",
+          "Адаптивная вёрстка",
+        ],
+      },
+      {
+        label: "Карты и визуализация",
+        items: ["VK Maps", "Yandex Maps", "Recharts", "Tiptap"],
+      },
+      {
+        label: "Тестирование",
+        items: ["Vitest", "Jest", "React Testing Library"],
+      },
+      {
+        label: "Инструменты",
+        items: [
+          "Git",
+          "Webpack",
+          "Vite",
+          "ESLint",
+          "Prettier",
+          "Figma",
+          "Docker",
+          "Sentry",
+          "Intercom",
+        ],
+      },
+      { label: "CI/CD", items: ["GitLab CI", "GitHub Actions"] },
+      {
+        label: "Иностранные языки",
+        items: ["English - B1"],
+      },
     ],
   },
   experience: {
-    title: "Опыт",
+    title: "Опыт работы",
+    stackLabel: "Стек",
     content: [
       {
-        title: "ООО “Двигус”",
+        title: "ООО «Двигус»",
+        summary: "PropTech, подбор недвижимости",
         description: [
-          "Разработал MVP системы управления подбором недвижимости с нуля как единственный frontend-разработчик: от проектирования интерфейсов и архитектуры до вывода продукта в production",
-          "Объединил в одном приложении несколько рабочих инструментов операторов, что позволило отказаться от использования нескольких отдельных сервисов и упростило рабочий процесс",
-          "Реализовал интеграции с внешними сервисами (телефония, UIS, ЦИАН) и автоматическим обзвоном, обеспечив стабильную работу ключевых процессов колл-центра",
-          "Инициировал улучшения внешнего сервиса телефонии: сформировал предложения по расширению публичных методов для взаимодействия с UI",
-          "Совместно с командой внешнего сервиса выявил и задокументировал более 10 багов, что повысило стабильность их виджета и улучшило интеграцию в нашем продукте",
+          "Спроектировал архитектуру и разработал с нуля два frontend-приложения системы управления подбором недвижимости - для операторов и контент-менеджеров. Как единственный frontend-разработчик отвечал за весь frontend-стек и построение общего UI-кита на базе Mantine.",
+          "Объединил в едином приложении оператора 3 ранее разрозненных сервиса - это упростило и ускорило рабочий процесс, избавив ~20 операторов от переключения между инструментами.",
+          "Реализовал бесшовную интеграцию виджета телефонии в интерфейс оператора: инициировал расширение его публичных методов совместно с вендором - без этой доработки не удалось бы дать полный функционал виджета внутри нашего приложения.",
+          "Совместно с командой сервиса телефонии выявил и задокументировал более 10 багов виджета, что повысило стабильность его работы и позволило избежать проблем в нашем приложении.",
+          "Реализовал интеграции с внешними источниками данных (UIS, ЦИАН) и сервисом автоматического обзвона, обеспечив стабильную работу ключевых процессов колл-центра.",
+          "Спроектировал сложные динамические формы: набор полей и правил валидации подставляется в зависимости от типа объекта.",
+          "Оптимизировал производительность приложения (Code Splitting, Lazy Loading): сократил размер бандла при первой загрузке на 58%. Мигрировал проект с React 18 на React 19.",
+          "Внедрил unit- и интеграционное тестирование (Vitest, React Testing Library), покрытие ключевых модулей ~40%; настроил CI-пайплайн (линтинг, тесты, сборка) в GitLab CI.",
         ],
         location: "г. Москва",
-        position: "Frontend разработчик",
+        position: "Frontend-разработчик",
         tags: [
           "React",
           "TypeScript",
@@ -41,19 +108,20 @@ export const ru: Resume = {
           "Recharts",
           "Tiptap",
         ],
-        date: "Октябрь 2023 – по н.в.",
+        date: "Октябрь 2023 - настоящее время",
         duration: "",
       },
       {
-        title: "ООО “Квантум”",
+        title: "ООО «Квантум»",
+        summary: "C2B2C-платформа в сфере услуг красоты",
         description: [
-          "Руководил разработкой клиентской части C2B2C-платформы, включающей веб-приложение на Next.js и мобильное приложение на React Native",
-          "Принимал ключевые архитектурные решения на фронтенде, обеспечивая масштабируемость приложения и единый подход к разработке",
-          "Руководил небольшой командой фронтенд-разработчиков (2 junior разработчика): проводил code review, помогал в проектировании решений и развитии навыков",
-          "Интегрировал сторонние сервисы (Sentry, Intercom) для мониторинга ошибок и коммуникации с пользователями",
+          "Принимал ключевые архитектурные решения фронтенда, обеспечив единый подход к разработке веб- и мобильных приложений.",
+          "Разработал клиентскую и бизнес-часть платформы: веб и мобильные приложения (Next.js, React Native) для клиентской части платформы.",
+          "Зона ответственности выросла от самостоятельной frontend-разработки до управления командой из 2 junior-разработчиков: код-ревью, менторинг, распределение задач.",
+          "Интегрировал Sentry для мониторинга ошибок и Intercom для коммуникации с пользователями.",
         ],
         location: "г. Якутск",
-        position: "Frontend разработчик",
+        position: "Frontend-разработчик",
         tags: [
           "React",
           "Next.js",
@@ -70,18 +138,20 @@ export const ru: Resume = {
         duration: "1 год 1 месяц",
       },
       {
-        title: "ООО “АЭБ АйТи”",
+        title: "ООО «АЭБ АйТи»",
+        summary: "Региональный медицинский портал",
         description: [
-          "Участвовал в разработке регионального медицинского портала на Next.js и административной панели на React",
-          "Реализовал систему сабдоменных сайтов для медицинских организаций с возможностью настройки структуры страниц и тем оформления",
-          "Разрабатывал сложные формы, интерфейсы с drag-and-drop, WYSIWYG-редакторы и интеграции с картами",
-          "Обеспечил возможность управления контентом и структурой сайтов без участия разработчиков",
+          "Реализовал сабдоменную архитектуру сайтов для 30+ медицинских организаций: каждая организация получает собственный сайт с настраиваемой структурой страниц и темой оформления.",
+          "Разработал административную панель для управления контентом и структурой сайтов без участия разработчиков.",
+          "Разрабатывал сложные формы, drag-and-drop интерфейсы, WYSIWYG-редакторы и интеграцию с Яндекс Картами.",
+          "Переписал легаси-страницу карты объектов (фильтрация точек, кластеризация) с Class Components на Hooks.",
         ],
         location: "г. Якутск",
-        position: "Frontend разработчик",
+        position: "Frontend-разработчик",
         tags: [
           "React",
           "Next.js",
+          "TypeScript",
           "Redux",
           "Formik",
           "Bootstrap",
@@ -93,45 +163,99 @@ export const ru: Resume = {
       },
     ],
   },
-  education: {
-    title: "Образование",
-    content: [
-      {
-        title: "Якутский колледж связи и энергетики (ЯКСЭ)",
-        date: "2015 - 2018",
-        specialty: "Аудиовизуальная техника",
-      },
-    ],
-  },
 };
 
 export const en: Resume = {
   firstName: "Vladimir",
   lastName: "Stepanov",
+  position: "Frontend Developer",
   contacts: [
+    { value: "https://t.me/hartaithan", type: "link" },
     { value: "stepanov.vladimir.in.re@gmail.com", type: "mail" },
     { value: "https://hartaithan.github.io", type: "link" },
-    { value: "https://t.me/hartaithan", type: "link" },
     { value: "Russia, Yakutsk", type: "text" },
   ],
   about: {
     title: "About",
     content: [
-      "Frontend developer with commercial experience in React development since 2020. I specialize in building complex web applications: from internal admin panels to high-load interfaces for operational teams.",
-      "I have experience developing products from scratch to production, making frontend architectural decisions, and leading a small team of developers, including conducting code reviews and mentoring junior specialists.",
+      "Frontend developer with 5+ years of commercial experience in React, TypeScript, and Next.js. I design SPA and SSR application architecture from scratch, build UI kits, complex dynamic forms, and third-party integrations (telephony, maps, CRM). Took a product from idea to production as the sole frontend developer. Led a team of 2 junior developers: code review, mentoring.",
+    ],
+  },
+  skills: {
+    title: "Skills",
+    content: [
+      {
+        label: "Languages & Technologies",
+        items: ["JavaScript", "TypeScript", "HTML", "CSS", "SCSS"],
+      },
+      {
+        label: "Frameworks",
+        items: ["React", "SPA", "Next.js", "SSR", "React Native"],
+      },
+      {
+        label: "State & Data",
+        items: ["MobX", "Redux", "Redux Toolkit", "React Query"],
+      },
+      {
+        label: "Work with API",
+        items: ["REST API", "Axios", "GraphQL", "Apollo Client", "WebSocket"],
+      },
+      {
+        label: "Forms & Validation",
+        items: ["React Hook Form", "Formik", "Zod", "Schema-driven forms"],
+      },
+      {
+        label: "UI & Styling",
+        items: [
+          "Mantine",
+          "Bootstrap",
+          "Tailwind",
+          "Storybook",
+          "Responsive design",
+        ],
+      },
+      {
+        label: "Maps & Visualization",
+        items: ["VK Maps", "Yandex Maps", "Recharts", "Tiptap"],
+      },
+      { label: "Testing", items: ["Vitest", "Jest", "React Testing Library"] },
+      {
+        label: "Tools",
+        items: [
+          "Git",
+          "Webpack",
+          "Vite",
+          "ESLint",
+          "Prettier",
+          "Figma",
+          "Docker",
+          "Sentry",
+          "Intercom",
+        ],
+      },
+      { label: "CI/CD", items: ["GitLab CI", "GitHub Actions"] },
+      {
+        label: "Foreign Languages",
+        items: ["English - B1"],
+      },
     ],
   },
   experience: {
     title: "Experience",
+    stackLabel: "Stack",
     content: [
       {
         title: "Dvigus",
+        summary: "PropTech, real estate matching",
         description: [
-          "Developed the MVP of a real estate lead management system from scratch as the sole frontend developer: from UI and architecture design to bringing the product to production.",
-          "Consolidated several operator tools into a single application, allowing the team to abandon multiple separate services and simplify the workflow.",
-          "Implemented integrations with external services (telephony, UIS, CIAN) and automated calling systems, ensuring stable operation of key call center processes.",
-          "Initiated improvements to the external telephony service by proposing extensions to public methods for better UI interaction.",
-          "Collaborated with the external service team to identify and document more than 10 bugs, improving the stability of their widget and the integration within our product.",
+          "Designed the architecture and developed two frontend applications for a real estate matching management system from scratch — one for operators and one for content managers. As the sole frontend developer, I was responsible for the entire frontend stack and for building a shared UI kit based on Mantine.",
+          "Consolidated 3 previously separate services into a single operator application, simplifying and speeding up the workflow and removing tool-switching for ~20 operators.",
+          "Delivered seamless telephony widget integration into the operator interface: initiated an expansion of its public methods with the vendor - without this the widget's full functionality couldn't have been embedded in our app.",
+          "Worked with the telephony service team to identify and document 10+ widget bugs, improving its stability and preventing issues in our application.",
+          "Integrated external data sources (UIS, CIAN) and an automated dialing service, ensuring stable operation of key call center processes.",
+          "Designed complex dynamic forms: the set of fields and validation rules is determined by the object type.",
+          "Optimized application performance (Code splitting, Lazy loading): reduced the initial bundle size by 58%. Migrated the project from React 18 to React 19.",
+          "Introduced unit and integration testing (Vitest, React Testing Library), ~40% coverage of key modules; set up a CI pipeline (linting, tests, build) in GitLab CI.",
         ],
         location: "Moscow, Russia",
         position: "Frontend Developer",
@@ -150,11 +274,12 @@ export const en: Resume = {
       },
       {
         title: "Qwantum",
+        summary: "C2B2C beauty services platform",
         description: [
-          "Led the development of the client side of a C2B2C platform, including a web application built with Next.js and a mobile application built with React Native.",
-          "Made key frontend architectural decisions, ensuring application scalability and a unified development approach.",
-          "Led a small team of frontend developers (2 junior developers): conducted code reviews, assisted in solution design, and supported their professional growth.",
-          "Integrated third-party services (Sentry, Intercom) for error monitoring and user communication.",
+          "Made key frontend architecture decisions, ensuring a unified approach to web and mobile development.",
+          "Built the client and business sides of the platform: web and mobile apps (Next.js, React Native) for the client side of the platform.",
+          "Grew from sole frontend developer into leading a team of 2 junior developers: code review, mentoring, task distribution.",
+          "Integrated Sentry for error monitoring and Intercom for user communication.",
         ],
         location: "Yakutsk, Russia",
         position: "Frontend Developer",
@@ -175,17 +300,19 @@ export const en: Resume = {
       },
       {
         title: "AEB IT",
+        summary: "Regional medical portal",
         description: [
-          "Participated in the development of a regional medical portal built with Next.js and an administrative panel built with React.",
-          "Implemented a system of subdomain-based websites for medical organizations with customizable page structures and themes.",
-          "Developed complex forms, drag-and-drop interfaces, WYSIWYG editors, and map integrations.",
-          "Enabled content and site structure management without developer involvement.",
+          "Implemented a subdomain architecture for 30+ medical organizations' websites: each organization gets its own site with a configurable page structure and theme.",
+          "Built an admin panel for managing content and site structure without developer involvement.",
+          "Developed complex forms, drag-and-drop interfaces, WYSIWYG editors, and Yandex Maps integration.",
+          "Rewrote the legacy object map page (point filtering, clustering) from Class Components to Hooks.",
         ],
         location: "Yakutsk, Russia",
         position: "Frontend Developer",
         tags: [
           "React",
           "Next.js",
+          "TypeScript",
           "Redux",
           "Formik",
           "Bootstrap",
@@ -194,16 +321,6 @@ export const en: Resume = {
         ],
         date: "May 2021 - May 2022",
         duration: "1 year",
-      },
-    ],
-  },
-  education: {
-    title: "Education",
-    content: [
-      {
-        title: "Yakutsk College of Communications and Energy (YCCE)",
-        date: "2015 - 2018",
-        specialty: "Audio-visual technology",
       },
     ],
   },

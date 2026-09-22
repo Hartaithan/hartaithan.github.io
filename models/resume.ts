@@ -10,6 +10,7 @@ export interface ResumeAbout {
 
 export interface ResumeExperienceItem {
   title: string;
+  summary: string;
   description: string[];
   location: string;
   position: string;
@@ -20,25 +21,26 @@ export interface ResumeExperienceItem {
 
 export interface ResumeExperience {
   title: string;
+  stackLabel: string;
   content: ResumeExperienceItem[];
 }
 
-export interface ResumeEducationItem {
-  title: string;
-  specialty: string;
-  date: string;
+export interface ResumeSkillGroup {
+  label: string;
+  items: string[];
 }
 
-export interface ResumeEducation {
+export interface ResumeSkills {
   title: string;
-  content: ResumeEducationItem[];
+  content: ResumeSkillGroup[];
 }
 
 export interface Resume {
   firstName: string;
   lastName: string;
+  position: string;
   contacts: ResumeContact[];
   about: ResumeAbout;
+  skills: ResumeSkills;
   experience: ResumeExperience;
-  education: ResumeEducation;
 }

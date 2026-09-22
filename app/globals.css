@@ -31,6 +31,10 @@
   #slide[data-motion-pop-id] {
     position: fixed !important;
   }
+
+  #resume * {
+    line-height: normal;
+  }
 }
 
 @layer utilities {
