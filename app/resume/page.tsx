@@ -1,9 +1,13 @@
 import ResumeSection from "@/sections/resume";
 import type { Metadata } from "next";
-import type { FC } from "react";
+import { Suspense, type FC } from "react";
 
 export const metadata: Metadata = { title: "Resume" };
 
-const ResumePage: FC = () => <ResumeSection />;
+const ResumePage: FC = () => (
+  <Suspense>
+    <ResumeSection />
+  </Suspense>
+);
 
 export default ResumePage;

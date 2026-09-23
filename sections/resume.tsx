@@ -2,14 +2,14 @@
 
 import Resume from "@/components/resume";
 import { resume } from "@/constants/resume";
+import { useLanguage } from "@/hooks/use-language";
 import IconAlphabetCyrillic from "@/icons/alphabet-cyrillic";
 import IconAlphabetLatin from "@/icons/alphabet-latin";
 import IconDownload from "@/icons/download";
 import IconPrint from "@/icons/print";
-import type { Language } from "@/models/language";
 import { cn } from "@/utils/styles";
 import type { ComponentPropsWithoutRef } from "react";
-import { useCallback, useMemo, useState, type FC } from "react";
+import { useCallback, useMemo, type FC } from "react";
 
 const Button: FC<ComponentPropsWithoutRef<"button">> = (props) => {
   const { className, children, ...rest } = props;
@@ -28,7 +28,7 @@ const Button: FC<ComponentPropsWithoutRef<"button">> = (props) => {
 };
 
 const ResumeSection: FC = () => {
-  const [language, setLanguage] = useState<Language>("ru");
+  const [language, setLanguage] = useLanguage();
 
   const filename = useMemo(
     () => `cv-frontend-stepanov-vladimir-${language}.pdf`,
@@ -50,9 +50,9 @@ const ResumeSection: FC = () => {
     document.title = prev;
   }, [filename]);
 
-  const handleEnglish = useCallback(() => setLanguage("en"), []);
+  const handleEnglish = useCallback(() => setLanguage("en"), [setLanguage]);
 
-  const handleRussian = useCallback(() => setLanguage("ru"), []);
+  const handleRussian = useCallback(() => setLanguage("ru"), [setLanguage]);
 
   return (
     <main
