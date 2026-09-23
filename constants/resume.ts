@@ -116,7 +116,7 @@ export const ru: Resume = {
         summary: "C2B2C-платформа в сфере услуг красоты",
         description: [
           "Принимал ключевые архитектурные решения фронтенда, обеспечив единый подход к разработке веб- и мобильных приложений.",
-          "Разработал клиентскую и бизнес-часть платформы: веб и мобильные приложения (Next.js, React Native) для клиентской части платформы.",
+          "Разработал клиентскую часть платформы: веб и мобильное приложение (Next.js, React Native), отвечающую за взаимодействие пользователей с продуктом.",
           "Зона ответственности выросла от самостоятельной frontend-разработки до управления командой из 2 junior-разработчиков: код-ревью, менторинг, распределение задач.",
           "Интегрировал Sentry для мониторинга ошибок и Intercom для коммуникации с пользователями.",
         ],
@@ -277,7 +277,7 @@ export const en: Resume = {
         summary: "C2B2C beauty services platform",
         description: [
           "Made key frontend architecture decisions, ensuring a unified approach to web and mobile development.",
-          "Built the client and business sides of the platform: web and mobile apps (Next.js, React Native) for the client side of the platform.",
+          "Developed the client-side of the platform: web and mobile applications (Next.js, React Native), responsible for user interaction with the product.",
           "Grew from sole frontend developer into leading a team of 2 junior developers: code review, mentoring, task distribution.",
           "Integrated Sentry for error monitoring and Intercom for user communication.",
         ],
