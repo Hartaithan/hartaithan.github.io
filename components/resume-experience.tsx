@@ -1,14 +1,25 @@
+import { useHydrated } from "@/hooks/use-hydrated";
+import type { Language } from "@/models/language";
 import type { ResumeExperienceItem } from "@/models/resume";
+import {
+  getExperienceDateRange,
+  getExperienceDuration,
+} from "@/utils/experience";
+import { cn } from "@/utils/styles";
 import type { FC } from "react";
 
 interface Props {
   data: ResumeExperienceItem;
   stackLabel: string;
+  lang: Language;
 }
 
 const ResumeExperience: FC<Props> = (props) => {
-  const { data, stackLabel } = props;
-  const { date, duration, title, summary, description, position, tags } = data;
+  const { data, stackLabel, lang } = props;
+  const { from, to, title, summary, description, position, tags } = data;
+  const hydrated = useHydrated();
+  const dateRange = getExperienceDateRange(from, to, lang);
+  const duration = hydrated ? getExperienceDuration(from, to, lang) : "";
   return (
     <div className="flex flex-col">
       <div className="flex flex-wrap items-baseline justify-between gap-x-2 text-sm print:text-xs">
@@ -17,9 +28,15 @@ const ResumeExperience: FC<Props> = (props) => {
           <p>{position}</p>
         </div>
         <div className="flex flex-wrap gap-x-1">
-          <p className="text-neutral-600">{date}</p>
+          <p className="text-neutral-600">{dateRange}</p>
           {duration.length > 0 && (
-            <p className="text-neutral-600">({duration})</p>
+            <p
+              className={cn(
+                "text-neutral-600",
+                to === "present" && "print:hidden",
+              )}>
+              ({duration})
+            </p>
           )}
         </div>
       </div>

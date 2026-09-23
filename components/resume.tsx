@@ -2,17 +2,22 @@ import ResumeContacts from "@/components/resume-contacts";
 import ResumeExperience from "@/components/resume-experience";
 import ResumeHeading from "@/components/resume-heading";
 import ResumeSkills from "@/components/resume-skills";
+import { useHydrated } from "@/hooks/use-hydrated";
+import type { Language } from "@/models/language";
 import type { Resume as ResumeData } from "@/models/resume";
+import { getTotalExperienceDuration } from "@/utils/experience";
 import type { FC } from "react";
 
 interface Props {
   data: ResumeData;
+  lang: Language;
 }
 
 const Resume: FC<Props> = (props) => {
-  const { data } = props;
+  const { data, lang } = props;
   const { firstName, lastName, position, contacts, about, skills, experience } =
     data;
+  const hydrated = useHydrated();
   return (
     <div
       id="resume"
@@ -39,13 +44,21 @@ const Resume: FC<Props> = (props) => {
           <ResumeSkills key={idx} data={data} />
         ))}
       </div>
-      <ResumeHeading>{experience.title}</ResumeHeading>
+      <ResumeHeading>
+        {experience.title}
+        {hydrated && (
+          <span className="ml-2 font-normal text-neutral-600 print:hidden">
+            {getTotalExperienceDuration(experience.content, lang)}
+          </span>
+        )}
+      </ResumeHeading>
       <div className="mt-3 flex flex-col space-y-4 sm:mt-2 print:mt-1.5 print:space-y-3">
         {experience.content.map((data, idx) => (
           <ResumeExperience
             key={idx}
             data={data}
             stackLabel={experience.stackLabel}
+            lang={lang}
           />
         ))}
       </div>

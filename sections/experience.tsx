@@ -3,6 +3,8 @@
 import ExperienceSlide from "@/components/experience-slide";
 import { experience } from "@/constants/experience";
 import { useCarousel } from "@/hooks/use-carousel";
+import { useHydrated } from "@/hooks/use-hydrated";
+import { getTotalExperienceDuration } from "@/utils/experience";
 import { cn } from "@/utils/styles";
 import type { BoundingBox, Transition, Variants } from "framer-motion";
 import { AnimatePresence, motion } from "framer-motion";
@@ -50,10 +52,18 @@ const ExperienceSection: FC = () => {
   const { page, direction, index, paginate, handleDragEnd } = useCarousel({
     data: experience,
   });
+  const hydrated = useHydrated();
   return (
     <div className="relative flex min-h-0 flex-col overflow-hidden rounded-lg bg-neutral-900 px-5 py-4 md:px-6 md:py-5 lg:min-h-40">
-      <div className="mb-3 flex justify-between">
-        <h1 className="text-base font-semibold md:text-xl">Experience</h1>
+      <div className="mb-3 flex items-baseline justify-between">
+        <div className="flex items-baseline gap-x-3">
+          <h1 className="text-base font-semibold md:text-xl">Experience</h1>
+          {hydrated && (
+            <p className="text-xs text-neutral-400 md:text-sm">
+              {getTotalExperienceDuration(experience, "en")}
+            </p>
+          )}
+        </div>
         <div className="flex gap-x-3">
           <Arrow className="rotate-180" onClick={() => paginate(-1)} />
           <Arrow onClick={() => paginate(1)} />

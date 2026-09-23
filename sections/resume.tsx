@@ -58,7 +58,7 @@ const ResumeSection: FC = () => {
     <main
       id="resume"
       className="size-full overflow-auto bg-gray-100 p-2 pb-28 font-sans md:p-4 md:pb-20 print:bg-transparent print:p-0">
-      <Resume data={resume[language]} />
+      <Resume data={resume[language]} lang={language} />
       <div className="fixed bottom-4 left-2/4 grid w-11/12 -translate-x-2/4 grid-cols-2 gap-x-2 gap-y-2 sm:w-max md:grid-cols-4 print:hidden">
         <Button onClick={handleDownload}>
           <IconDownload className="size-5 min-w-5" />

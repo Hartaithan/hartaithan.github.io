@@ -1,4 +1,5 @@
 import { experience } from "@/constants/experience";
+import { useHydrated } from "@/hooks/use-hydrated";
 import {
   formatExperienceDate,
   getExperienceDuration,
@@ -13,7 +14,8 @@ const ExperienceSlide: FC<Props> = (props) => {
   const { index } = props;
   const slide = experience[index];
   const { title, location, from, to, tags } = slide;
-  const duration = getExperienceDuration(from, to);
+  const hydrated = useHydrated();
+  const duration = hydrated ? getExperienceDuration(from, to) : "";
   return (
     <>
       <div className="flex items-center gap-x-2">

@@ -15,8 +15,8 @@ export interface ResumeExperienceItem {
   location: string;
   position: string;
   tags: string[];
-  date: string;
-  duration: string;
+  from: string;
+  to: string;
 }
 
 export interface ResumeExperience {
