@@ -11,15 +11,17 @@ const About: FC = () => {
       <div className="col-span-1 rounded-lg bg-neutral-900 px-5 py-4 md:px-6 md:py-5 lg:col-span-2">
         <h1 className="text-base font-semibold md:text-xl">About Me</h1>
         <p className="mt-2 text-sm md:text-base 2xl:text-lg">
-          Frontend developer with commercial experience in&nbsp;
-          <b>React development since 2020</b>. I specialize in&nbsp;
-          <b>building complex web applications</b>: from internal admin panels
-          to high-load interfaces for operational teams
+          Frontend developer with&nbsp;
+          <b>5+ years of commercial experience</b> in React, TypeScript, and
+          Next.js. I design SPA and SSR application architecture from scratch,
+          and build&nbsp;
+          <b>UI kits, complex dynamic forms, and integrations</b> with
+          third-party services like telephony, maps, and CRMs
         </p>
         <p className="mt-2 text-sm md:text-base 2xl:text-lg">
-          I have experience developing products&nbsp;
-          <b>from scratch to production</b>, making frontend architectural
-          decisions, and <b>leading a small team of developers</b>, including
+          I have taken a product&nbsp;
+          <b>from idea to production</b> as the sole frontend developer, and
+          have experience <b>leading a small team of developers</b>, including
           conducting code reviews and mentoring junior specialists
         </p>
       </div>

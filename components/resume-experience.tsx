@@ -16,7 +16,7 @@ const ResumeExperience: FC<Props> = (props) => {
           <p className="font-semibold">{title}</p>
           <p>{position}</p>
         </div>
-        <div className="flex flex-wrap gap-x-3">
+        <div className="flex flex-wrap gap-x-1">
           <p className="text-neutral-600">{date}</p>
           {duration.length > 0 && (
             <p className="text-neutral-600">({duration})</p>
